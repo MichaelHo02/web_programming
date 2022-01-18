@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Form Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://www.google.com">Google Website</a></li>
+            <li><a href="https://www.google.com">Google Website</a></li>
+            <li><a href="https://www.google.com">Google Website</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <details>
+                <summary>Contact Form Detail</summary>
+                <form action="overwrite-this" method="post" enctype="text/plain">
+                    <p>
+                        Purpose of Contact:
+                        <select name="purpose-of-contact" id="purpose-of-contact">
+                            <option value="" selected>Please select</option>
+                            <option value="business">Business</option>
+                            <option value="personal">Personal</option>
+                        </select>
+                    </p>
+                    <p>
+                        Name:
+                        <input type="text" name="name" maxlength="50" />
+                    </p>
+                    <p>
+                        Email:
+                        <input type="email" name="email" />
+                    </p>
+                    <p>
+                        Phone:
+                        <input type="tel" name="phone" />
+                    </p>
+                    <p>
+                        Preferred contact method:
+                        <input type="radio" name="contact-method" id="email" />
+                        <label for="email">Email</label>
+                        <input type="radio" name="contact-method" id="phone" />
+                        <label for="phone">Phone</label>
+                    </p>
+                    <p>
+                        Contact day(s):
+                        <input type="checkbox" name="contact-day[]" id="monday" />
+                        <label for="monday">Monday</label>
+                        <input type="checkbox" name="contact-day[]" id="tuesday" />
+                        <label for="tuesday">Tuesday</label>
+                        <input type="checkbox" name="contact-day[]" id="wednesday" />
+                        <label for="wednesday">Wednesday</label>
+                        <input type="checkbox" name="contact-day[]" id="thursday" />
+                        <label for="thursday">Thursday</label>
+                        <input type="checkbox" name="contact-day[]" id="friday" />
+                        <label for="friday">Friday</label>
+                        <input type="checkbox" name="contact-day[]" id="saturday" />
+                        <label for="saturday">Saturday</label>
+                        <input type="checkbox" name="contact-day[]" id="sunday" />
+                        <label for="sunday">Sunday</label>
+                    </p>
+                    <p>
+                        Message:
+                        <br />
+                        <textarea name="" id="" cols="80" rows="10" placeholder="Please enter your message"></textarea>
+                    </p>
+                    <input type="reset" name="" value="Reset the Form" />
+                    <input type="submit" name="send" value="Send" />
+                </form>
+            </details>
+        </section>
+
+        <section>
+            <details>
+                <summary>Video music</summary>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A?controls=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe> 
+            </details>
+        </section>
+    </main>
+    <footer>
+        <p>Copy right by Thach Ho</p>
+    </footer>
+</body>
+
+</html>

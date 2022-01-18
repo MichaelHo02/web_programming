@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+</head>
+
+<body>
+    <h1>Contact Form</h1>
+    <form action="overwrite-this" method="post" enctype="text/plain">
+        <p>
+            Purpose of Contact:
+            <select name="purpose-of-contact" id="purpose-of-contact">
+                <option value="" selected>Please select</option>
+                <option value="business">Business</option>
+                <option value="personal">Personal</option>
+            </select>
+        </p>
+        <p>
+            Name:
+            <input type="text" name="name" maxlength="50" />
+        </p>
+        <p>
+            Email:
+            <input type="email" name="email" />
+        </p>
+        <p>
+            Phone:
+            <input type="tel" name="phone" />
+        </p>
+        <p>
+            Preferred contact method:
+            <input type="radio" name="contact-method" id="email" />
+            <label for="email">Email</label>
+            <input type="radio" name="contact-method" id="phone" />
+            <label for="phone">Phone</label>
+        </p>
+        <p>
+            Contact day(s):
+            <input type="checkbox" name="contact-day[]" id="monday" />
+            <label for="monday">Monday</label>
+            <input type="checkbox" name="contact-day[]" id="tuesday" />
+            <label for="tuesday">Tuesday</label>
+            <input type="checkbox" name="contact-day[]" id="wednesday" />
+            <label for="wednesday">Wednesday</label>
+            <input type="checkbox" name="contact-day[]" id="thursday" />
+            <label for="thursday">Thursday</label>
+            <input type="checkbox" name="contact-day[]" id="friday" />
+            <label for="friday">Friday</label>
+            <input type="checkbox" name="contact-day[]" id="saturday" />
+            <label for="saturday">Saturday</label>
+            <input type="checkbox" name="contact-day[]" id="sunday" />
+            <label for="sunday">Sunday</label>
+        </p>
+        <p>
+            Message:
+            <br />
+            <textarea name="" id="" cols="80" rows="10" placeholder="Please enter your message"></textarea>
+        </p>
+        <input type="reset" name="" value="Reset the Form" />
+        <input type="submit" name="send" value="Send" />
+    </form>
+</body>
