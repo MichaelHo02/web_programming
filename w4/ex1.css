@@ -1,0 +1,45 @@
+h1, h2, h3, h4 {
+    color: #B84773;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+.active {
+    color: #4773B8;
+}
+
+a {
+    color: inherit;
+}
+
+main p {
+    font-weight: bold;
+}
+
+.job-description p {
+    color: #73B847;
+}
+
+tr:nth-child(odd) {
+    background-color: #4773B8;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #B84773;
+    color: white;
+}
