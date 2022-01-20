@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive layouts</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .column {
+            background-color: lightpink;
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+            border: 3px lightcoral solid;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: tan;
+        }
+
+        footer {
+            clear: both;
+            background-color: turquoise;
+        }
+
+        /* mobile phones is default */
+
+        /* tablets */
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            #left {
+                float: left;
+                width: 50%;
+            }
+
+            #right {
+                float: right;
+                width: 50%;
+            }
+        }
+
+        /* destops */
+        @media screen and (min-width: 1024px) {
+            #left {
+                width: calc(100% / 3 * 2);
+                /* width: 60%; */
+                float: left;
+            }
+
+            #left .column {
+                width: 50%;
+                float: left;
+            }
+
+            #right {
+                width: calc(100% / 3);
+                float: right;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        This is the header
+    </header>
+    <div id="left">
+        <div class="column">
+            Column 1
+        </div>
+        <div class="column">
+            Column 2
+        </div>
+    </div>
+    <div id="right">
+        <div class="column">
+            <p>Column 3</p>
+            <p>Column 3</p>
+            <p>Column 3</p>
+        </div>
+    </div>
+    <footer>
+        This is the footer
+    </footer>
+</body>
+
+</html>
