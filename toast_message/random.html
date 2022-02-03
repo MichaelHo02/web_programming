@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        .card {
+            margin: auto;
+        }
+
+        .card.store {
+            height: 250px;
+            width: 500px;
+            /* remove when using grid */
+            border-radius: 5px;
+            transition: all 0.5s;
+            /* background-color: red; */
+            padding-bottom: 20px;
+        }
+
+        .card:hover.item {
+            box-shadow: 0 10px 20px 0 rgb(0 23 51 / 9%);
+        }
+
+        .card:hover .card__body.item {
+            transition: inherit;
+            padding: 0 20px;
+        }
+
+        .card:hover .store__container.item {
+            transition: inherit;
+            padding: 0 20px;
+        }
+
+        .card:not(:hover) .card__body.item {
+            transition: inherit;
+            padding: 0 10px;
+        }
+
+        .card:not(:hover) .store__container.item {
+            transition: inherit;
+            padding: 0 10px;
+        }
+
+        .card__img-container.store {
+            width: 50%;
+        }
+
+        .card__img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card store">
+        <h3>Apple Store</h3>
+        <div class="card__img-container store">
+            <img src="https://preview.colorlib.com/theme/aranoz/img/feature/xfeature_1.png.pagespeed.ic.JaQC-LjGH6.webp"
+                alt="Apple store logo" class="card__img">
+        </div>
+    </div>
+</body>
+
+</html>

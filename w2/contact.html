@@ -5,10 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Page</title>
+    <style>
+        /* You can remove these code below*/
+        input,
+        button,
+        textarea {
+            border: 0;
+            outline: none;
+        }
+
+        /* Main code */
+
+        .text-field {
+            position: relative;
+        }
+
+        .text-field label {
+            display: inline-block;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            background-color: white;
+            padding: 1px 5px;
+            font-size: 12px;
+            transform: translateY(-50%);
+            color: #6a5af9;
+        }
+
+        .text-field input {
+            padding: 15px;
+            display: block;
+            width: 100%;
+            color: #999;
+            font-size: 14px;
+            border: 1px solid #6a5af9;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Contact Form</h1>
+    <!-- <h1>Contact Form</h1>
     <form action="overwrite-this" method="post" enctype="text/plain">
         <p>
             Purpose of Contact:
@@ -61,5 +101,12 @@
         </p>
         <input type="reset" name="" value="Reset the Form" />
         <input type="submit" name="send" value="Send" />
-    </form>
+    </form> -->
+
+
+
+    <div class="text-field">
+        <label for="username3">Username</label>
+        <input autocomplete="off" type="text" id="username3" placeholder="Enter your username" />
+    </div>
 </body>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Calculator</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+
+        input[type="button"] {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        function do_it(operand) {
+            const num1 = Number(document.getElementById('number1').value);
+            const num2 = Number(document.getElementById('number2').value);
+            const resultElement = document.getElementById('result');
+            let result = 0;
+            switch (operand) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = NaN;
+                    break;
+            }
+            console.log(num1);
+            console.log(num2);
+            console.log(result);
+            resultElement.value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <input id="number1" placeholder="Number 1" type="number">
+    </div>
+    <div>
+        <input id="number2" placeholder="Number 2" type="number">
+    </div>
+    <div>
+        <input id="result" placeholder="Result" readonly type="number">
+    </div>
+    <div>
+        <input type="button" value=" + " onclick="do_it('+')">
+        <input type="button" value=" - " onclick="do_it('-')">
+        <input type="button" value=" * " onclick="do_it('*')">
+        <input type="button" value=" / " onclick="do_it('/')">
+    </div>
+</body>
+
+</html>
