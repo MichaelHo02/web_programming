@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phone Validator</title>
+</head>
+
+<body>
+    <div>
+        <div><label for="phone">Phone</label></div>
+        <div><input id="phone"></div>
+    </div>
+    <div>
+        <input id="check_btn" type="button" value="Check">
+    </div>
+</body>
+
+<script>
+    const button = document.getElementById('check_btn');
+    button.addEventListener('click', () => {
+        const phoneInput = document.getElementById('phone').value;
+        const regexLandline = /^0?[1-9]\d{1,2}\d{7,8}$/;
+        let regexMobile = /^0[1-9]\d{8}$/;
+        if (phoneInput.search(regexMobile) !== -1 || phoneInput.search(regexLandline) !== -1) {
+            alert('Valid phone number!');
+        } else {
+            alert('Invalid phone number!');
+        }
+    });
+</script>
+</html>
