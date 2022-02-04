@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital Clock</title>
+    <style>
+        div {
+            margin: 20px;
+        }
+
+        #time {
+            background-color: bisque;
+            font-size: xx-large;
+        }
+    </style>
+    <script>
+        let interval = undefined;
+
+        function updateTime() {
+            let date = new Date;
+            const time = document.getElementById('time');
+            let h = date.getHours().toString();
+            let m = date.getMinutes().toString();
+            let s = date.getSeconds().toString();
+            if (h.length < 2) {
+                h = '0' + h.toString();
+            }
+
+            if (m.length < 2) {
+                m = '0' + m.toString();
+            }
+
+            if (s.length < 2) {
+                s = '0'.concat(s.toString());
+            }
+
+            const current_time = h + ':' + m + ':' + s;
+            time.innerText = current_time;
+        }
+
+        function start_stop_timer() {
+            const time = document.getElementById('time');
+            const button = document.getElementById('timer_btn');
+
+            if (button.value === 'Stop') {
+                clearInterval(interval);
+                time.innerText = 'Your local time';
+                button.value = 'Start';
+            } else {
+                updateTime();
+                interval = setInterval(updateTime, 1000);
+                button.value = 'Stop';
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="time">
+        Your local time
+    </div>
+    <div>
+        <input id="timer_btn" type="button" value="Start" onclick="start_stop_timer()">
+    </div>
+</body>
+
+</html>
