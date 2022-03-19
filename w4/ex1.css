@@ -43,3 +43,7 @@ tr:nth-child(even) {
     background-color: #B84773;
     color: white;
 }
+
+main > p:first-of-type {
+    color: yellow;
+}
