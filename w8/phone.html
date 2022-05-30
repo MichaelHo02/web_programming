@@ -21,7 +21,7 @@
     const button = document.getElementById('check_btn');
     button.addEventListener('click', () => {
         const phoneInput = document.getElementById('phone').value;
-        const regexLandline = /^0?[1-9]\d{1,2}\d{7,8}$/;
+        const regexLandline = /^[1-9]\d{2,3}\d{7,8}$/;
         let regexMobile = /^0[1-9]\d{8}$/;
         if (phoneInput.search(regexMobile) !== -1 || phoneInput.search(regexLandline) !== -1) {
             alert('Valid phone number!');
